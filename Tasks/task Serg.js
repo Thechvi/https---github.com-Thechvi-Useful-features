@@ -14,6 +14,7 @@ const sumSalaries = (users) => {
 	});
 	return sum;
 };
+console.log(sumSalaries(arr));
 // use 'reduce'
 const sumSalaries = (users) => {
 	let sum = users.reduce((i, x) => i + x.salary, 0);
