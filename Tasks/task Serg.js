@@ -5,7 +5,7 @@ const arr = [
 
 ];
 
-// use 'forEach'
+/*// use 'forEach'
 const sumSalaries = (users) => {
 	let sum = 0;
 	users.forEach((el) => {
@@ -21,3 +21,18 @@ const sumSalaries = (users) => {
 	return sum;
 };
 console.log(sumSalaries(arr));
+*/
+// Who have the highest salary?
+const hightSalaries = (users, propName = 'name') => {
+	let max = 0;
+	let maxIndex = -1;
+	users.forEach((user, index) => {
+
+		if (user.salary > max) {
+			max = user.salary;
+			maxIndex = index;
+		};
+	});
+	return users[maxIndex][propName];
+};
+console.log(hightSalaries(arr));
