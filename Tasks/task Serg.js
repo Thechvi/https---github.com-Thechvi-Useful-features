@@ -22,7 +22,7 @@ const sumSalaries = (users) => {
 };
 console.log(sumSalaries(arr));
 */
-// Who have the highest salary?
+/*// Who have the highest salary?
 const hightSalaries = (users, propName = 'name', positName = 'position', salLevel = 'salary') => {
 	let max = 0;
 	let maxIndex = -1;
@@ -36,3 +36,18 @@ const hightSalaries = (users, propName = 'name', positName = 'position', salLeve
 	return `${'name: ' + users[maxIndex][propName] + '\n' + 'position: ' + users[maxIndex][positName] + '\n' + 'salary: ' + users[maxIndex][salLevel]}`;
 };
 console.log(hightSalaries(arr));
+*/
+// Who have the lowest salary?
+const lowestSalary = (users, propName = 'name', positName = 'position', salLevel = 'salary') => {
+	let max = 10000;
+	let maxIndex = -1;
+	users.forEach((user, index) => {
+
+		if (user.salary < max) {
+			max = user.salary;
+			maxIndex = index;
+		};
+	});
+	return `${'name: ' + users[maxIndex][propName] + '\n' + 'position: ' + users[maxIndex][positName] + '\n' + 'salary: ' + users[maxIndex][salLevel]}`;
+};
+console.log(lowestSalary(arr));
